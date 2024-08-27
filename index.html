@@ -2,27 +2,60 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- La metaetiqueta "viewport" garantiza que la página sea responsiva y se vea bien en todos los dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
+    <!-- Se enlaza el archivo CSS externo para los estilos -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Preconexión a Google Fonts para mejorar el rendimiento de la carga de la fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Se importa la fuente "Inter" desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header >
-      <img class="logo" src="Logo.png" alt="Logo alura" />
+    <!-- El encabezado contiene el logo de la página -->
+    <header>
+      <img class="logo" src="/resources/Logo.png" alt="Logo alura" />
     </header>
-    <main class="contenedor">
+    <main class="contenedor__main">
+      <!-- Sección para ingresar el texto a encriptar o desencriptar -->
       <section>
-        <input  class="cuadro__texto" size="30" type="text" placeholder="Ingrese el texto aqui" />
+        <!-- Textarea donde el usuario ingresa el texto. Tiene un placeholder indicando su función -->
+        <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+        <!-- Contenedor para los botones de encriptar y desencriptar -->
         <div class="botones">
-          <button class="encriptar">Encriptar</button>
-          <button class="desencriptar">Desencriptar</button>
+          <!-- Botón para encriptar el texto ingresado, que llama a la función JavaScript "encriptar" -->
+          <button class="encriptar" onclick="encriptar()">Encriptar</button>
+          <!-- Botón para desencriptar el texto ingresado, que llama a la función JavaScript "desencriptar" -->
+          <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
         </div>
       </section>
-      <section class="tarjeta">
-        <img  clas="munieco" src="Muñeco.png" alt="Dibujo de una persona sostniendo una lupa" />
+      
+      <!-- Sección para mostrar los resultados de la encriptación o desencriptación -->
+      <section class="resultado">
+        <!-- Contenido inicial que se muestra cuando no hay texto encriptado o desencriptado -->
+        <div class="resultado__contenido" id="resultadoInicial">
+          <!-- Imagen ilustrativa que se muestra cuando no hay ningún mensaje encontrado -->
+          <img src="/resources/Muñeco.png" alt="Ilustración">
+          <!-- Mensaje indicando que no se encontró ningún mensaje -->
+          <p>Ningún mensaje fue encontrado</p>
+          <!-- Instrucciones para el usuario -->
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>        
+        <!-- Contenido que se muestra después de encriptar o desencriptar el texto -->
+        <div class="resultado__contenido" id="resultadoFinal" style="display: none;">
+          <!-- Textarea que muestra el texto encriptado o desencriptado. Es de solo lectura -->
+          <textarea id="outputText" readonly></textarea>
+          <!-- Botón para copiar el texto resultante al portapapeles, que llama a la función JavaScript "copiarTexto" -->
+          <button class="desencriptar__copiar" onclick="copiarTexto()">Copiar</button>
+        </div>
       </section>
     </main>
+    
+    <!-- Pie de página vacío, que podría ser utilizado para enlaces, copyright, etc. -->
     <footer></footer>
+    <!-- Se enlaza el archivo JavaScript que contiene la lógica de encriptar, desencriptar y copiar -->
     <script src="script.js"></script>
   </body>
 </html>
