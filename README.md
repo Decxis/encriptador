@@ -37,11 +37,11 @@ Para utilizar este proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/encriptador-texto.git
+    git clone https://github.com/Decxis/encriptador.git
     ```
 2. Navega al directorio del proyecto:
     ```bash
-    cd encriptador-texto
+    cd encriptador
     ```
 3. Abre el archivo `index.html` en tu navegador:
     ```bash
@@ -59,9 +59,9 @@ Para utilizar este proyecto localmente, sigue estos pasos:
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto:
 
 1. Realiza un fork del proyecto.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y confirma tus commits (`git commit -m 'Agregar nueva funcionalidad'`).
-4. Envía tus cambios al repositorio remoto (`git push origin feature/nueva-funcionalidad`).
+2. Crea una nueva rama.
+3. Realiza tus cambios y confirma tus commits.
+4. Envía tus cambios al repositorio remoto.
 5. Abre una solicitud de extracción (Pull Request).
 
 
